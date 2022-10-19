@@ -4,10 +4,10 @@
       "authLevel": "anonymous",
       "type": "httpTrigger",
       "direction": "in",
+      "route": "samples",
       "name": "req",
       "methods": [
-        "get",
-        "post"
+        "get"
       ]
     },
     {
