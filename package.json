@@ -1,16 +1,16 @@
 {
-  "name": "jsreport-app",
+  "name": "inspired-jsreports",
   "version": "1.0.0",
-  "description": "",
+  "description": "Reporting (based on JSReport)",
   "scripts": {
     "start": "node server.js",
     "test": "echo \"No tests yet...\""
   },
   "dependencies": {
-    "axios": "0.26.1",
-    "jsreport": "3.6.1",
+    "axios": "1.1.3",
     "concat-stream": "2.0.0",
-    "fs-extra": "10.0.1"
-  },
-  "devDependencies": {}
+    "fs-extra": "10.1.0",
+    "jsreport": "^3.8.0",
+    "uuid": "^9.0.0"
+  }
 }
