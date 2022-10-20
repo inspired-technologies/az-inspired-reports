@@ -4,7 +4,7 @@
   "description": "Reporting (based on JSReport)",
   "scripts": {
     "start": "node server.js",
-    "test": "echo \"No tests yet...\""
+    "test": "node test.js"
   },
   "dependencies": {
     "axios": "1.1.3",

@@ -2,7 +2,8 @@ const axios = require('axios')
 const fs = require('fs')
 const concat = require('concat-stream')
 
-const AZURE_FUNCTION_TRIGGER_URL = 'https://jsrtest.azurewebsites.net/api/samples'
+const AZURE_FUNCTION_TRIGGER_URL = 'https://inspired-reports.azurewebsites.net/api/samples'
+// const AZURE_FUNCTION_TRIGGER_URL = 'http://localhost:7071/api/samples'
 
 async function test() {
     console.time('test')   
