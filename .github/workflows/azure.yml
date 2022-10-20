@@ -28,6 +28,12 @@ jobs:
         npm install
         npm run build --if-present
         npm run test --if-present
+        popd        
+    - name: 'Resolve Chrome Browser'
+      shell: pwsh
+      run: |
+        pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}/node_modules/puppeteer'
+        npm run install
         popd
     - name: 'Run Azure Functions Action'
       uses: Azure/functions-action@v1
