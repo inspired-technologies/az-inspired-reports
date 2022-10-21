@@ -31,8 +31,6 @@ jobs:
           pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
           npm install
           npm run build --if-present
-          npm run test --if-present
-          move node_modules '/home/site'
           popd
 
       - name: 'Run Azure Functions Action'
@@ -46,10 +44,10 @@ jobs:
           respect-funcignore: true
           publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_5A0D2D41B3E84D038311882C395AC6CB }}
 
-      - name: 'Test Project Dependencies Using Npm'
+      - name: 'Resolve & Test Project Dependencies Using Npm'
         shell: pwsh
         run: |
-          move '/home/site/node_modules' '/home/site/wwwroot'
+          pwd
           pushd '/home/site/wwwroot'
           npm run test --if-present
           popd
