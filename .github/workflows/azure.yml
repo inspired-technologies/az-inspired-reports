@@ -25,7 +25,7 @@ jobs:
       shell: pwsh
       run: |
         pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
-        npm install --location=gloabal
+        npm install --location=global
         npm run build --if-present
         npm run test --if-present
         popd
