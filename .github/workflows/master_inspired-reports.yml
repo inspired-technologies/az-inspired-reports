@@ -47,8 +47,7 @@ jobs:
       - name: 'Resolve & Test Project Dependencies Using Npm'
         shell: pwsh
         run: |
-          pwd
-          pushd '/home/site/wwwroot'
+          pushd './${{ env.AZURE_FUNCTIONAPP_PACKAGE_PATH }}'
           npm run test --if-present
           popd
           
